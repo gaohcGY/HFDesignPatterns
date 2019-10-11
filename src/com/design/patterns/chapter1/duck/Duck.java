@@ -1,6 +1,6 @@
 package com.design.patterns.chapter1.duck;
 
-public abstract class Duck {
+public class Duck {
 
     public Duck() {
 
@@ -14,5 +14,5 @@ public abstract class Duck {
         System.out.println("I'm swimming");
     }
 
-    protected abstract void display();
+//    protected abstract void display();
 }
