@@ -1,4 +1,4 @@
-package com.model.design.chapter1.duck;
+package com.design.patterns.chapter1.duck;
 
 public class RedheadDuck extends Duck {
     @Override

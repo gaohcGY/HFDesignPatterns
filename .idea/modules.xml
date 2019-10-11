@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/modelDesign.iml" filepath="$PROJECT_DIR$/modelDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFDesignPatterns.iml" filepath="$PROJECT_DIR$/HFDesignPatterns.iml" />
     </modules>
   </component>
 </project>
