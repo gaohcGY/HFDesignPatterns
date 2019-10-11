@@ -1,11 +1,11 @@
-package com.design.patterns.chapter1;
+package com.design.patterns.chapter1.duck;
 
 import com.design.patterns.chapter1.duck.behavior.instance.FlyRocketPowered;
 import com.design.patterns.chapter1.duck.ducks.MallardDuck;
 import com.design.patterns.chapter1.duck.base.Duck;
 import com.design.patterns.chapter1.duck.ducks.ModelDuck;
 
-public class DuckDimulator {
+public class DuckSimulator {
 
     public static void main(String[] args) {
         Duck mallard = new MallardDuck();

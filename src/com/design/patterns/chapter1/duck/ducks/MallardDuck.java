@@ -15,7 +15,4 @@ public class MallardDuck extends Duck {
     public void display() {
         System.out.println("Head is Green");
     }
-//    public void display() {
-//        System.out.println("Head is Green");
-//    }
 }
