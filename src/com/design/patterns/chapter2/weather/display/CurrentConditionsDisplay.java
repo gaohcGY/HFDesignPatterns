@@ -1,38 +1,32 @@
 package com.design.patterns.chapter2.weather.display;
 
 import com.design.patterns.chapter2.weather.callback.DisplayElement;
+import com.design.patterns.chapter2.weather.callback.Observer;
 import com.design.patterns.chapter2.weather.callback.Subject;
 import com.design.patterns.chapter2.weather.model.WeatherData;
 
-import java.util.Observable;
-import java.util.Observer;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     private float temperature;
     private float humidity;
-    private Observable observable;
 
-    public CurrentConditionsDisplay(Observable observable) {
-        this.observable = observable;
-        observable.addObserver(this);
-    }
+    private Subject weatherData;
 
-    @Override
-    public void update(Observable o, Object arg) {
-//        this.temperature = temp;
-//        this.humidity = humidity;
-//        display();
-        if (o instanceof WeatherData) {
-            WeatherData weatherData = (WeatherData) o;
-            this.temperature = weatherData.getTemperature();
-            this.humidity = weatherData.getHumidity();
-            display();
-        }
+    public CurrentConditionsDisplay(Subject weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
     }
 
     @Override
     public void display() {
         System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
+    }
+
+    @Override
+    public void update(float temp, float humidity, float pressure) {
+        this.temperature = temp;
+        this.humidity = humidity;
+        display();
     }
 }
