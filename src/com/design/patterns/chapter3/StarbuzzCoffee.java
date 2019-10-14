@@ -22,8 +22,9 @@ public class StarbuzzCoffee {
 
         Beverage beverage2 = new HousBlend();
         beverage2 = new Soy(beverage2);
-        beverage2 = new Mocha(beverage2);
-        beverage2 = new Whip(beverage2);
+//        beverage2 = new Mocha(beverage2);
+        beverage2.setSize(Beverage.GRANDE);
+//        beverage2 = new Whip(beverage2);
         System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
     }
 }
