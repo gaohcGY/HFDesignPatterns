@@ -1,7 +1,7 @@
-package com.design.patterns.chapter3.decorator;
+package com.design.patterns.chapter3.starbuzz.decorator;
 
-import com.design.patterns.chapter3.base.Beverage;
-import com.design.patterns.chapter3.base.CondimentDecorator;
+import com.design.patterns.chapter3.starbuzz.base.Beverage;
+import com.design.patterns.chapter3.starbuzz.base.CondimentDecorator;
 
 public class Mocha extends CondimentDecorator {
 

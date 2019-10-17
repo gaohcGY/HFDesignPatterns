@@ -1,12 +1,12 @@
-package com.design.patterns.chapter3;
+package com.design.patterns.chapter3.starbuzz;
 
-import com.design.patterns.chapter3.base.Beverage;
-import com.design.patterns.chapter3.coffee.DarkRoast;
-import com.design.patterns.chapter3.coffee.Espresso;
-import com.design.patterns.chapter3.coffee.HousBlend;
-import com.design.patterns.chapter3.decorator.Mocha;
-import com.design.patterns.chapter3.decorator.Soy;
-import com.design.patterns.chapter3.decorator.Whip;
+import com.design.patterns.chapter3.starbuzz.base.Beverage;
+import com.design.patterns.chapter3.starbuzz.coffee.DarkRoast;
+import com.design.patterns.chapter3.starbuzz.coffee.Espresso;
+import com.design.patterns.chapter3.starbuzz.coffee.HousBlend;
+import com.design.patterns.chapter3.starbuzz.decorator.Mocha;
+import com.design.patterns.chapter3.starbuzz.decorator.Soy;
+import com.design.patterns.chapter3.starbuzz.decorator.Whip;
 
 public class StarbuzzCoffee {
 

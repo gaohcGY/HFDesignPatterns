@@ -1,6 +1,6 @@
-package com.design.patterns.chapter3.coffee;
+package com.design.patterns.chapter3.starbuzz.coffee;
 
-import com.design.patterns.chapter3.base.Beverage;
+import com.design.patterns.chapter3.starbuzz.base.Beverage;
 
 public class HousBlend extends Beverage {
 
