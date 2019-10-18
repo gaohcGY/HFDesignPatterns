@@ -4,7 +4,7 @@ import com.design.patterns.chapter4.pizza.factory.CaliforniaStylePizzaStore;
 import com.design.patterns.chapter4.pizza.factory.ChicagoStylePizzaStore;
 import com.design.patterns.chapter4.pizza.factory.NYStylePizzaStore;
 import com.design.patterns.chapter4.pizza.factory.PizzaStore;
-import com.design.patterns.chapter4.pizza.product.Pizza;
+import com.design.patterns.chapter4.pizza.product.base.Pizza;
 
 public class PizzaTestDrie {
 

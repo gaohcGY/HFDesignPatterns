@@ -1,13 +1,27 @@
 package com.design.patterns.chapter4.pizza.product;
 
+import com.design.patterns.chapter4.pizza.factory.PizzaIngredientFactory;
+import com.design.patterns.chapter4.pizza.product.base.Pizza;
+
 public class NYStyleCheesePizza extends Pizza {
 
-    public NYStyleCheesePizza() {
-        name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
+    private PizzaIngredientFactory ingredientFactory;
+    public NYStyleCheesePizza(PizzaIngredientFactory ingredientFactory) {
 
-        toppings.add("Grated Reggiano Cheese");
+        this.ingredientFactory = ingredientFactory;
+//        name = "NY Style Sauce and Cheese Pizza";
+//        dough = "Thin Crust Dough";
+//        sauce = "Marinara Sauce";
+//
+//        toppings.add("Grated Reggiano Cheese");
+    }
+
+    @Override
+    public void prepare() {
+        System.out.println("Preparing " + getName());
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
     }
 
 //    @Override

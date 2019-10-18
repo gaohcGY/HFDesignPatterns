@@ -1,6 +1,6 @@
 package com.design.patterns.chapter4.pizza.factory;
 
-import com.design.patterns.chapter4.pizza.product.Pizza;
+import com.design.patterns.chapter4.pizza.product.base.Pizza;
 
 public abstract class PizzaStore {
 

@@ -1,19 +1,31 @@
 package com.design.patterns.chapter4.pizza.factory;
 
 import com.design.patterns.chapter4.pizza.product.*;
+import com.design.patterns.chapter4.pizza.product.base.Pizza;
 
 public class CaliforniaStylePizzaStore extends PizzaStore {
     @Override
     public Pizza createPizza(String type) {
-        if (type.equals("cheese")) {
-            return new CaliforniaStyleCheesePizza();
-        } else if (type.equals("veggie")) {
-            return new CaliforniaStyleVeggiePizza();
-        } else if (type.equals("clam")) {
-            return new CaliforniaStyleClamPizza();
-        } else if (type.equals("pepperoni")) {
-            return new CaliforniaStylePepperoniPizza();
+        PizzaIngredientFactory ingredientFactory = new CaliforniaPizzaIngredientFactory();
+        Pizza pizza = null;
+        switch (type) {
+            case "cheese":
+                pizza = new CaliforniaStyleCheesePizza(ingredientFactory);
+                pizza.setName("California Style Cheese Pizza");
+                break;
+            case "veggie":
+                pizza = new CaliforniaStyleVeggiePizza(ingredientFactory);
+                pizza.setName("California Style Veggie Pizza");
+                break;
+            case "clam":
+                pizza = new CaliforniaStyleClamPizza(ingredientFactory);
+                pizza.setName("California Style Clam Pizza");
+                break;
+            case "pepperoni":
+                pizza = new CaliforniaStylePepperoniPizza(ingredientFactory);
+                pizza.setName("California Style Pepperoni Pizza");
+                break;
         }
-        return null;
+        return pizza;
     }
 }
