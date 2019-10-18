@@ -1,9 +1,9 @@
 package com.design.patterns.chapter4.pizza.product;
 
-public class PepperoniPizza extends Pizza {
+public class NYStylePepperoniPizza extends Pizza {
     @Override
     public void prepare() {
-        
+
     }
 
     @Override

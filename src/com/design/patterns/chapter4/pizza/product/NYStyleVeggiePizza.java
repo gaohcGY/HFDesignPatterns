@@ -1,6 +1,6 @@
 package com.design.patterns.chapter4.pizza.product;
 
-public class CheesePizza extends Pizza {
+public class NYStyleVeggiePizza extends Pizza {
     @Override
     public void prepare() {
 

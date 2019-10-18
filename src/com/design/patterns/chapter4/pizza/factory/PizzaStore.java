@@ -1,17 +1,12 @@
-package com.design.patterns.chapter4.pizza.order;
+package com.design.patterns.chapter4.pizza.factory;
 
-import com.design.patterns.chapter4.pizza.factory.SimplePizzaFactory;
 import com.design.patterns.chapter4.pizza.product.Pizza;
 
-public class PizzaStore {
-    SimplePizzaFactory factory;
-
-    public PizzaStore(SimplePizzaFactory factory) {
-        this.factory = factory;
-    }
+public abstract class PizzaStore {
 
     public Pizza orderPizza(String type) {
-        Pizza pizza = factory.createPizza(type);
+        Pizza pizza;
+        pizza = createPizza(type);
         if (pizza == null) {
             System.out.println("you order has not implements, we will try is in feature");
             return null;
@@ -22,4 +17,6 @@ public class PizzaStore {
         pizza.box();
         return pizza;
     }
+
+    public abstract Pizza createPizza(String type);
 }
